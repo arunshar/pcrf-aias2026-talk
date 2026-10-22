@@ -11,7 +11,7 @@ Society, in San Francisco on 5 to 7 November 2026.
 | Video (13:13) | The YouTube link will be added here after the upload. |
 | Slides (22 pages, PDF) | [slides/PCRF_AIAS2026_slides.pdf](slides/PCRF_AIAS2026_slides.pdf) |
 | Paper (13 pages, PDF) | [paper/PCRF_AIAS2026_paper.pdf](paper/PCRF_AIAS2026_paper.pdf) |
-| Poster (48 by 36 in, PDF) | [poster/pcrf_poster_aias2026.pdf](poster/pcrf_poster_aias2026.pdf) |
+| Poster (A0 portrait, 33.1 by 46.8 in, PDF) | [poster/pcrf_poster_aias2026.pdf](poster/pcrf_poster_aias2026.pdf) |
 | Poster source and build notes | [poster/](poster/) |
 | Training, export and serving code | [github.com/arunshar/pc-rf](https://github.com/arunshar/pc-rf) |
 
@@ -81,7 +81,7 @@ Every number below comes from one training seed per arm.
 
 - The slides are the talk deck as it will be presented, including three backup slides on metric
   definitions, training configuration and serving details.
-- The poster folder holds the LaTeX source, its figures, a preview image and a verification note with the build command and the QR code checks.
+- The poster folder holds the LaTeX source, its figures, a preview image and a verification note with the build command and the QR code checks. The poster is A0 portrait, as AIAS+ requires.
 - The paper is the revised manuscript prepared for the conference's second review round. It is
   anonymized for that review, so its author block reads "Anonymous".
 

@@ -1,10 +1,11 @@
 % =====================================================================
-%  PC-RF poster for AIAS+ 2026, 48" x 36" landscape, XeLaTeX.
+%  PC-RF poster for AIAS+ 2026, A0 portrait (33.1 in x 46.8 in), XeLaTeX.
 %
-%  FORMAT: the Spatial Atlas poster (Berkeley RDI Agentic AI Summit, Aug 2026)
-%  with its NVIDIA-derived green palette removed. Same page size, EB Garamond
-%  with Fira Mono, hairline separation, numbered sections with bold run-in
-%  headers, and takeaway boxes. The palette is the validated pair used in the
+%  FORMAT: the AIAS+ rule is A0 portrait, 33.1 in x 46.8 in, printed and brought
+%  by the presenter. The typography follows the Spatial Atlas poster (Berkeley RDI
+%  Agentic AI Summit, Aug 2026) with its NVIDIA-derived green palette removed: EB
+%  Garamond with Fira Mono, hairline separation, numbered sections with bold run-in
+%  headers, and takeaway boxes. Two text columns sit above a full-width Resources band. The palette is the validated pair used in the
 %  talk charts: blue for PC-RF, orange for RF-base.
 %
 %  EVIDENCE BOUNDARY: every number comes from the project's numbers ledger or from
@@ -12,8 +13,8 @@
 % =====================================================================
 \documentclass{beamer}
 
-% 48in x 36in landscape = 121.92cm x 91.44cm.
-\usepackage[orientation=landscape,size=custom,width=121.92,height=91.44,scale=1.25]{beamerposter}
+% A0 portrait = 33.1 in x 46.8 in = 84.074 cm x 118.872 cm (2383.2 x 3369.6 pt).
+\usepackage[orientation=portrait,size=custom,width=84.074,height=118.872,scale=1.0]{beamerposter}
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -98,9 +99,9 @@
   \endgroup}
 \newcommand{\qrcell}[3]{%
   \begin{minipage}[t]{0.245\linewidth}\centering
-    \quietqrh{4.2cm}{#2}\par\vspace{0.04cm}
-    {\color{ncink}\bfseries\normalsize #1}\par
-    {\ttfamily\fontsize{10.5}{12}\selectfont\color{pcbluedark} #3}
+    \quietqrh{5.0cm}{#2}\par\vspace{0.04cm}
+    {\color{ncink}\bfseries\large #1}\par
+    {\ttfamily\fontsize{16}{19}\selectfont\color{pcbluedark} #3}
   \end{minipage}}
 \newtcolorbox{takeaway}{%
   enhanced, colback=pcwash, colframe=pcblue,
@@ -114,9 +115,9 @@
 % ---------------------------------------------------------------------
 \setbeamertemplate{headline}{%
   \begin{beamercolorbox}[wd=\paperwidth,sep=0pt]{background canvas}
-    \vspace{0.35cm}
+    \vspace{0.55cm}
     \begin{center}
-      \begin{minipage}{0.93\paperwidth}
+      \begin{minipage}{0.76\paperwidth}
         \centering
         {\color{pcbluedark}\ttfamily\normalsize\bfseries
           \MakeUppercase{AIAS+ 2026\ \ $\cdot$\ \ University of Minnesota}}\par
@@ -126,7 +127,7 @@
         \vspace{0.30cm}
         {\color{ncinktwo}\fontsize{40}{46}\selectfont
           A post-sampling projection makes rain non-negative and matches the coarse mean, and matched
-          three-year training shows no measurable gain from the penalties.}\par
+          three-year training shows no measurable perceptual gain from the penalties.}\par
         \vspace{0.32cm}
         {\color{ncink}\large Arun Sharma
           \quad\textcolor{nclinetwo}{$|$}\quad
@@ -144,7 +145,7 @@
         at ([xshift=-1.25cm,yshift=-8.40cm]current page.north east)
         {\begin{minipage}{6.4cm}\centering
           {\color{black}\quietqr{https://arunshar.com/}}\par\vspace{0.10cm}
-          {\ttfamily\scriptsize\color{pcbluedark}arunshar.com}
+          {\ttfamily\fontsize{16}{19}\selectfont\color{pcbluedark}arunshar.com}
         \end{minipage}};
     \end{tikzpicture}%
     \vspace{0.24cm}
@@ -154,13 +155,13 @@
   \end{beamercolorbox}
 }
 
-% FOOTER. Single-line contact and profile index (same as the Spatial Atlas poster).
+% FOOTER. Two-line contact and profile index.
 \setbeamertemplate{footline}{%
   \begin{beamercolorbox}[wd=\paperwidth,ht=0.16cm,dp=0cm]{background canvas}
     \hspace*{0pt}\textcolor{ncline}{\rule{\paperwidth}{0.16cm}}
   \end{beamercolorbox}
   \begin{beamercolorbox}[wd=\paperwidth,sep=0.28cm,center]{background canvas}
-    {\color{ncmuted}\fontsize{16}{19}\selectfont
+    {\color{ncmuted}\fontsize{18}{21}\selectfont
       \href{tel:+16129465123}{\texttt{Phone: +1 612-946-5123}}
       \hspace{0.55em}\textcolor{nclinetwo}{$|$}\hspace{0.55em}
       \href{mailto:arunshar@umn.edu}{\texttt{Email: arunshar@umn.edu}}
@@ -168,8 +169,8 @@
       \href{https://www.linkedin.com/in/arun08sharma/}{%
         \texttt{LinkedIn Profile: https://www.linkedin.com/in/arun08sharma/}}
       \hspace{0.55em}\textcolor{nclinetwo}{$|$}\hspace{0.55em}
-      \href{https://arunshar.com/}{\texttt{Website: https://arunshar.com/}}
-      \hspace{0.55em}\textcolor{nclinetwo}{$|$}\hspace{0.55em}
+      \href{https://arunshar.com/}{\texttt{Website: https://arunshar.com/}}\par
+      \vspace{0.12cm}
       \href{https://github.com/arunshar}{%
         \texttt{GitHub Profile: https://github.com/arunshar}}
       \hspace{0.55em}\textcolor{nclinetwo}{$|$}\hspace{0.55em}
@@ -179,7 +180,7 @@
       \href{https://x.com/arunshar08}{%
         \texttt{X Profile: https://x.com/arunshar08}}}
   \end{beamercolorbox}
-  \vspace{0.38cm}
+  \vspace{0.58cm}
 }
 
 \hyphenation{CorrDiff SRCNN SRGAN RF-base PC-RF AOTInductor}
@@ -192,8 +193,8 @@
 \vspace{0.42cm}
 \begin{columns}[t,onlytextwidth]
 
-%% ==================== COLUMN 1 : PROBLEM, METHOD, DATA ====================
-\begin{column}{0.320\textwidth}
+%% ==================== COLUMN 1 ====================
+\begin{column}{0.485\textwidth}
 
   \begin{possection}{1.}{Overview}
     \heil{Objective} Downscale coarse ERA5 precipitation to a fine grid with a
@@ -202,9 +203,9 @@
     \par\vspace{0.14cm}
     \heil{Limit of current practice} Sharp generative downscalers can produce
     negative rain, and so can bicubic interpolation. Our CorrDiff reimplementation
-    has the best PSNR on ERA5 2020 (28.38) with one seed per arm, yet 45\% of the cells of its
-    ensemble-mean precipitation are negative. In the three-year run its rate is
-    0.108, near bicubic at 0.119.
+    has the best PSNR on ERA5 2020 (28.38). Yet 45\% of the cells of its
+    ensemble-mean precipitation are negative, with one seed per arm. In the three-year
+    run its rate is 0.108, near bicubic at 0.119.
     \par\vspace{0.18cm}
     \begin{takeaway}
       \tklabel{Key takeaway}
@@ -215,11 +216,12 @@
 
   \begin{possection}{2.}{Proposed Method}
     \includegraphics[width=\linewidth]{architecture_corrected_outlined.pdf}
-    \figcap{Figure 1.}{PC-RF as trained and served. The 7.6M-parameter U-Net is the
+    \figcap{Figure 1.}{This diagram shows PC-RF as trained and served. The 7.6M-parameter U-Net is the
     only exported graph. The Euler sampler and the projection run in host code.}
     \par\vspace{0.20cm}
     \heil{Training} Rectified flow learns a velocity from noise to data, and three
-    penalties act on a one-step clean-field estimate.
+    penalties act on a one-step clean-field estimate. On ERA5, the divergence penalty
+    acts on a deformation term (Section 5).
     \begingroup
     \setlength{\abovedisplayskip}{0.10cm}\setlength{\belowdisplayskip}{0.10cm}
     \begin{align}
@@ -232,14 +234,14 @@
     \endgroup
     \heil{Inference} Each of eight ensemble members runs twenty Euler steps. The
     projection then clamps rain at zero and applies one rescale per sample, so the
-    domain mean matches the coarse mean $\bar{p}_c$ over land and sea. This domain-level rescaling follows Hess et al.\ (2022), who rescale a trained GAN's precipitation once after training. Our rescale needs one positive cell.
+    domain mean matches the coarse mean $\bar{p}_c$ over land and sea. This domain-level rescaling follows Hess et al.\ (2022), who rescale a trained GAN's precipitation once after training.
     \begingroup
     \setlength{\abovedisplayskip}{0.10cm}\setlength{\belowdisplayskip}{0.10cm}
     \begin{equation}
       \Pi(p) = \max(p,0)\cdot\frac{\bar{p}_c}{\operatorname{mean}\bigl(\max(p,0)\bigr)}
     \end{equation}
     \endgroup
-    The wind is not projected. A divergence-free projection needs a Poisson solve
+    The rescale needs one positive cell, and the wind is not projected. A divergence-free projection needs a Poisson solve
     over the whole domain, and near-surface convergence is physically real.
   \end{possection}
 
@@ -259,7 +261,7 @@
             SRGAN, DDPM and CorrDiff, scored without the projection.
       \item The \textbf{main run} trained 300 epochs at batch 32 with AdamW (learning
             rate $2\times10^{-4}$) on one A100, about 6.2 GPU-hours.
-      \item Each arm used \textbf{one training seed}, and the Sentinel-2 channels were
+      \item Each arm was \textbf{one training run} with no fixed seed, and the Sentinel-2 channels were
             zero in every run.
     \end{itemize}
     \par\vspace{0.10cm}
@@ -272,15 +274,9 @@
     \end{takeaway}
   \end{possection}
 
-  \vspace{-0.40cm}
-\end{column}
-
-%% ==================== COLUMN 2 : RESULTS ====================
-\begin{column}{0.320\textwidth}
-
   \begin{possection}{4.}{Results}
     \possub{4.1}{Synthetic mechanism check}
-    \includegraphics[width=\linewidth]{synthetic_check.png}
+    {\centering\includegraphics[width=0.88\linewidth]{synthetic_check.png}\par}
     \figcap{Figure 2.}{The check uses one constructed $128\times128$ field with exact
     physics, and no network is trained. The ``before'' field is the truth plus
     correlated noise and a negative bias. The projection drives NVR and MCE to zero,
@@ -288,9 +284,9 @@
     split between the two steps.}
     \par\vspace{0.30cm}
 
-    \possub{4.2}{ERA5 2020: only projected models are exactly valid}
+    \possub{4.2}{ERA5 2020: only projected models pass the NVR and MCE checks}
     {\small
-    \setlength{\tabcolsep}{5pt}
+    \setlength{\tabcolsep}{9pt}
     \renewcommand{\arraystretch}{1.12}
     \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}X rrrrrr@{}}
       \toprule
@@ -308,15 +304,26 @@
       \bottomrule
     \end{tabularx}}
     \figcap{Table 1.}{Shaded rows carry the projection. RF-base trained 200 epochs at
-    batch 16, and the other learned models trained 300. CRPS uses the 8 members, and
-    the other metrics use their mean. SSIM, PSNR and CRPS also average two wind
-    channels whose target is the upsampled coarse wind. MCE is a relative error of
-    the domain mean, not a water amount, and DE, a diagnostic, is in standardized grid units.}
+    batch 16, and the other learned models trained 300. For the four sampled models,
+    CRPS uses the 8 members and the other metrics use their mean, while bicubic, SRCNN
+    and SRGAN give one output, so the two groups are not strictly comparable. SSIM, PSNR
+    and CRPS also average two wind channels whose target is the upsampled coarse wind.
+    MCE is a relative error of the domain mean, not a water amount, and DE is the ERA5
+    deformation term, a diagnostic in standardized grid units.}
     \par\vspace{0.30cm}
 
+  \end{possection}
+
+  \vspace{-0.40cm}
+\end{column}
+
+%% ==================== COLUMN 2 ====================
+\begin{column}{0.485\textwidth}
+
+  \begin{possection}{4.}{Results (continued)}
     \possub{4.3}{One year at a matched budget}
     {\small
-    \setlength{\tabcolsep}{5pt}
+    \setlength{\tabcolsep}{9pt}
     \renewcommand{\arraystretch}{1.10}
     \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}X rrrr@{}}
       \toprule
@@ -332,38 +339,33 @@
     \end{tabularx}}
     \figcap{Table 2.}{The penalty arms tie RF-base on SSIM and lead it slightly on PSNR
     and CRPS. With one seed per arm, that lead cannot be separated from run-to-run
-    variation. The same RF-base checkpoint gives the Table 1 row, scored there with a
-    fresh 8-member sample.}
+    variation. DE is the same ERA5 deformation term. The same RF-base checkpoint gives
+    the Table 1 row, scored there with a fresh 8-member sample.}
     \par\vspace{0.30cm}
 
     \possub{4.4}{Three years at a matched budget: a tie}
-    \begin{center}\includegraphics[width=0.84\linewidth]{threeyr_null.png}\end{center}
+    \begin{center}\includegraphics[width=0.80\linewidth]{threeyr_null.png}\end{center}
     \figcap{Figure 3.}{Every arm trained 100 epochs on 2019--2021. RF-base matches
-    PC-RF on every perceptual score, and both keep NVR and MCE at zero. These scores
-    mix rain and wind.}
+    PC-RF on every perceptual score, and both keep NVR and MCE at zero up to rounding.
+    These scores mix rain and wind.}
     \par\vspace{0.18cm}
     \begin{takeaway}
       \tklabel{Result}
-      {\color{ncink}\normalsize The penalties add no measurable quality at a matched
-      three-year budget. The validity guarantee belongs to the projection.}
+      {\color{ncink}\normalsize The penalties add no measurable perceptual gain at a
+      matched three-year budget. The validity guarantee comes from the projection.}
     \end{takeaway}
   \end{possection}
 
-  \vspace{-0.40cm}
-\end{column}
-
-%% ==================== COLUMN 3 : CHECKS, SERVING, LIMITS ====================
-\begin{column}{0.320\textwidth}
-
+  \vspace{-0.20cm}
   \begin{possection}{5.}{What the Checks Certify}
     \begin{itemize}\setlength{\itemsep}{0.02cm}
-      \item \textbf{Reference-free}: NVR and MCE need only the generated field and its
-            coarse input.
+      \item \textbf{Reference-free}: NVR (negative-value rate) and MCE (mass-conservation
+            error) need only the generated field and its coarse input.
       \item \textbf{Certificates}: after the projection both are zero for any model, up
             to float32 rounding, so they report the inference step and cannot rank two
             projected models.
-      \item \textbf{Diagnostic}: On ERA5, a latitude sign error makes DE measure a
-            deformation term, not divergence, and it carries no guarantee. The
+      \item \textbf{Diagnostic}: On ERA5, a latitude sign error makes DE (divergence
+            error) measure a deformation term, not divergence, and it carries no guarantee. The
             reference wind is upsampled coarse wind, whose own DE is 0.0648 on
             2020 and 0.0567 on 2019--2021.
       \item \textbf{Necessary, not sufficient}: a field can pass every check and still
@@ -371,16 +373,16 @@
     \end{itemize}
     \par\vspace{0.12cm}
     \noindent
-    \begin{minipage}[t]{0.58\linewidth}
+    \begin{minipage}[t]{0.52\linewidth}
       \vspace{0pt}
       \includegraphics[width=\linewidth]{nvr_2020.png}
     \end{minipage}\hfill
-    \begin{minipage}[t]{0.39\linewidth}
+    \begin{minipage}[t]{0.45\linewidth}
       \vspace{0pt}\raggedright
-      {\color{ncmuted}\normalsize\textbf{Figure 4.}\hspace{0.3em}Share of precipitation
-      cells below zero on the ERA5 2020 test set. Every model scored without the
-      projection fails the gate, bicubic included. Bicubic's negatives come from
-      interpolation overshoot at rain edges, and a clamp would remove them.\par}
+      {\color{ncmuted}\normalsize\textbf{Figure 4.}\hspace{0.3em}The bars show the share of
+      precipitation cells below zero on the ERA5 2020 test set. Every model scored without
+      the projection fails the gate, bicubic included. Bicubic's negatives come from
+      interpolation ringing, and a clamp would remove them.\par}
     \end{minipage}
     \par\vspace{0.14cm}
     \begin{takeaway}
@@ -389,7 +391,7 @@
     \end{takeaway}
   \end{possection}
 
-  \vspace{-0.40cm}
+  \vspace{-0.20cm}
   \begin{possection}{6.}{From PyTorch to Production}
     \heil{Export the network, not the sampler} The exported graph is one velocity
     call, $v_\theta(x_t,t,c)$. The Euler loop and the projection stay in host code,
@@ -401,39 +403,39 @@
     host every step. The weights are random in the trained architecture.
     \par\vspace{0.06cm}
     \begin{center}\includegraphics[width=0.72\linewidth]{serving_bench.png}\end{center}
-    \figcap{Figure 5.}{One request and throughput at batch 32 on an A100-SXM4-40GB.
-    With TF32 off, \apicode{torch.compile} and AOTInductor match eager within
+    \figcap{Figure 5.}{The panels show one request and throughput at batch 32 on an
+    A100-SXM4-40GB, with random weights. With TF32 off, \apicode{torch.compile} and
+    AOTInductor match eager within a maximum absolute difference of
     $2\times10^{-6}$, and NVR stays at zero on every backend. The Rust service and Ray
     Serve were tested on a demo-scale export, and every model here trained on one GPU.}
   \end{possection}
 
-  \vspace{-0.40cm}
+  \vspace{-0.20cm}
   \begin{possection}{7.}{Conclusion and Future Work}
     \begin{itemize}\setlength{\itemsep}{0.02cm}
-      \item The projection carries the validity guarantee, and at a matched three-year
-            budget the penalties add no measurable gain.
+      \item The projection carries the validity guarantee, and the penalties add no
+            measurable perceptual gain at a matched three-year budget.
       \item The ERA5-Land reference is interpolated, so it cannot show downscaling skill.
-      \item The projection matches the land-and-sea coarse mean, which the reference breaks.
-      \item We used one domain, one test season and one seed per arm, with no extremes test.
+      \item The projection matches the land-and-sea coarse mean, which the reference does not match.
+      \item We used one domain and one run per arm, tested in autumn and early winter, with no extremes test.
       \item Baselines were scored without the projection, which any of them could apply.
       \item On ERA5, a sign error makes the divergence penalty and DE measure deformation.
       \item An independent target with its own precipitation would test the mass penalty.
     \end{itemize}
   \end{possection}
 
-  \vspace{-0.15cm}
-  \vspace{-0.40cm}
-  \begin{possection}{8.}{Resources}
-    \noindent
-    \qrcell{Repo}{https://github.com/arunshar/pcrf-aias2026-talk}{github.com/arunshar/pcrf-aias2026-talk}\hfill
-    \qrcell{Slides}{https://github.com/arunshar/pcrf-aias2026-talk/blob/main/slides/PCRF_AIAS2026_slides.pdf}{github.com/arunshar/pcrf-aias2026-talk}\hfill
-    \qrcell{Video}{https://youtu.be/xyiUB-ehX8g}{youtu.be/xyiUB-ehX8g}\hfill
-    \qrcell{Paper}{https://github.com/arunshar/pcrf-aias2026-talk/blob/main/paper/PCRF_AIAS2026_paper.pdf}{github.com/arunshar/pcrf-aias2026-talk}
-  \end{possection}
-
   \vspace{-0.40cm}
 \end{column}
 
 \end{columns}
+\vfill
+\begin{possection}{8.}{Resources}
+  \noindent
+  \qrcell{Repo}{https://github.com/arunshar/pcrf-aias2026-talk}{github.com/arunshar/pcrf-aias2026-talk}\hfill
+  \qrcell{Slides}{https://github.com/arunshar/pcrf-aias2026-talk/blob/main/slides/PCRF_AIAS2026_slides.pdf}{pcrf-aias2026-talk/slides/PCRF\_AIAS2026\_slides.pdf}\hfill
+  \qrcell{Video}{https://youtu.be/xyiUB-ehX8g}{youtu.be/xyiUB-ehX8g}\hfill
+  \qrcell{Paper}{https://github.com/arunshar/pcrf-aias2026-talk/blob/main/paper/PCRF_AIAS2026_paper.pdf}{pcrf-aias2026-talk/paper/PCRF\_AIAS2026\_paper.pdf}
+\end{possection}
+
 \end{frame}
 \end{document}
