@@ -1,6 +1,6 @@
 # Verification note: PC-RF poster for AIAS+ 2026
 
-The poster is `pcrf_poster_aias2026.pdf`, 48 by 36 inches, landscape, built from `pcrf_poster.tex` with XeLaTeX on 2026-10-22. SHA-256 prefix of the PDF: `52e5d366a0a5eef5`. `preview.png` is a 2400 px render of the same file.
+The poster is `pcrf_poster_aias2026.pdf`, 48 by 36 inches, landscape, built from `pcrf_poster.tex` with XeLaTeX on 2026-10-22. SHA-256 prefix of the PDF: `0226812a02b8b957`. `preview.png` is a 2400 px render of the same file.
 
 ## Build command
 
@@ -23,7 +23,7 @@ The fonts are EB Garamond and Fira Mono, as in the earlier posters.
 | Fonts | 11 embedded, none of Type 3 |
 | Overfull and underfull boxes | 0 and 0 |
 | Poster numbers | Every number appears in the 28 September 2026 paper draft or in the numbers ledger of the project |
-| Layout | The three columns end 1.15, 1.01 and 0.59 in above the footer line |
+| Layout | The three columns end 1.15, 1.01 and 0.37 in above the footer line |
 
 ## QR codes
 

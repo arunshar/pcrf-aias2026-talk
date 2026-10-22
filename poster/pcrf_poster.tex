@@ -130,7 +130,7 @@
         \vspace{0.32cm}
         {\color{ncink}\large Arun Sharma
           \quad\textcolor{nclinetwo}{$|$}\quad
-          Advisors: Prof. Shashi Shekhar and Prof. Vipin Kumar}\par
+          \textbf{Advisors:} Prof. Shashi Shekhar and Prof. Vipin Kumar}\par
         \vspace{0.16cm}
         {\color{ncmuted}\normalsize Department of Computer Science and Engineering,
           University of Minnesota, Twin Cities}\par
@@ -213,7 +213,7 @@
     \end{takeaway}
   \end{possection}
 
-  \begin{possection}{2.}{Method}
+  \begin{possection}{2.}{Proposed Method}
     \includegraphics[width=\linewidth]{architecture_corrected_outlined.pdf}
     \figcap{Figure 1.}{PC-RF as trained and served. The 7.6M-parameter U-Net is the
     only exported graph. The Euler sampler and the projection run in host code.}
@@ -232,7 +232,7 @@
     \endgroup
     \heil{Inference} Each of eight ensemble members runs twenty Euler steps. The
     projection then clamps rain at zero and applies one rescale per sample, so the
-    domain mean matches the coarse mean $\bar{p}_c$ over land and sea. This domain-level rescaling follows Hess et al.\ (2022), who rescale the precipitation of a trained GAN once after training.
+    domain mean matches the coarse mean $\bar{p}_c$ over land and sea. This domain-level rescaling follows Hess et al.\ (2022), who rescale a trained GAN's precipitation once after training. Our rescale needs one positive cell.
     \begingroup
     \setlength{\abovedisplayskip}{0.10cm}\setlength{\belowdisplayskip}{0.10cm}
     \begin{equation}
@@ -385,8 +385,7 @@
     \par\vspace{0.14cm}
     \begin{takeaway}
       \tklabel{Recommendation}
-      {\color{ncink}\normalsize Run NVR and MCE first as a cheap, reference-free gate,
-      and keep DE beside it as a diagnostic.}
+      {\color{ncink}\normalsize Run NVR and MCE first, and keep DE beside them as a diagnostic.}
     \end{takeaway}
   \end{possection}
 
@@ -401,7 +400,7 @@
     \apicode{torch.compile}, and 65.5\,ms with ONNX Runtime, which copies through the
     host every step. The weights are random in the trained architecture.
     \par\vspace{0.06cm}
-    \begin{center}\includegraphics[width=0.50\linewidth]{serving_bench.png}\end{center}
+    \begin{center}\includegraphics[width=0.72\linewidth]{serving_bench.png}\end{center}
     \figcap{Figure 5.}{One request and throughput at batch 32 on an A100-SXM4-40GB.
     With TF32 off, \apicode{torch.compile} and AOTInductor match eager within
     $2\times10^{-6}$, and NVR stays at zero on every backend. The Rust service and Ray
@@ -409,18 +408,16 @@
   \end{possection}
 
   \vspace{-0.40cm}
-  \begin{possection}{7.}{Limitations and Next Steps}
+  \begin{possection}{7.}{Conclusion and Future Work}
     \begin{itemize}\setlength{\itemsep}{0.02cm}
-      \item The reference cannot show downscaling skill. An independent target with its
-            own precipitation would test the mass penalty.
-      \item The projection matches the coarse mean over land and sea, a relation the
-            reference breaks. The rescale needs at least one positive cell.
-      \item We used one domain, one test season, and one seed per arm, with no
-            extremes evaluation.
+      \item The projection carries the validity guarantee, and at a matched three-year
+            budget the penalties add no measurable gain.
+      \item The ERA5-Land reference is interpolated, so it cannot show downscaling skill.
+      \item The projection matches the land-and-sea coarse mean, which the reference breaks.
+      \item We used one domain, one test season and one seed per arm, with no extremes test.
       \item Baselines were scored without the projection, which any of them could apply.
-      \item On ERA5, a sign error makes the divergence penalty and DE measure a
-            deformation term, not divergence. The synthetic check, in grid
-            coordinates, is unaffected.
+      \item On ERA5, a sign error makes the divergence penalty and DE measure deformation.
+      \item An independent target with its own precipitation would test the mass penalty.
     \end{itemize}
   \end{possection}
 
