@@ -8,7 +8,8 @@ Society, in San Francisco on 5 to 7 November 2026.
 
 | Item | Link |
 |---|---|
-| Video (13:13) | The YouTube link will be added here after the upload. |
+| Video (13:14) | [youtu.be/xyiUB-ehX8g](https://youtu.be/xyiUB-ehX8g) |
+| PyTorch Conference talk on the same model (YouTube) | [youtu.be/k1FH2Pu953w](https://youtu.be/k1FH2Pu953w) |
 | Slides (22 pages, PDF) | [slides/PCRF_AIAS2026_slides.pdf](slides/PCRF_AIAS2026_slides.pdf) |
 | Paper (13 pages, PDF) | [paper/PCRF_AIAS2026_paper.pdf](paper/PCRF_AIAS2026_paper.pdf) |
 | Poster (A0 portrait, 33.1 by 46.8 in, PDF) | [poster/pcrf_poster_aias2026.pdf](poster/pcrf_poster_aias2026.pdf) |

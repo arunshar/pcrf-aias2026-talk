@@ -1,12 +1,12 @@
 # Verification note: PC-RF poster for AIAS+ 2026
 
-The poster is `pcrf_poster_aias2026.pdf`, A0 portrait (33.1 by 46.8 inches), built from `pcrf_poster.tex` with XeLaTeX on 2026-10-22. SHA-256 prefix of the PDF: `cd4fe1daca28acb4`. `preview.png` is a 2400 px render of the same file.
+The poster is `pcrf_poster_aias2026.pdf`, A0 portrait (33.1 by 46.8 inches), built from `pcrf_poster.tex` with XeLaTeX on 2026-10-22. SHA-256 prefix of the PDF: `dec954a04c431184`. `preview.png` is a 2400 px render of the same file.
 
 The AIAS+ rule for posters is A0 portrait, 33.1 by 46.8 inches, printed and brought to the conference by the presenter. An earlier version of this poster was 48 by 36 inches in landscape. It is replaced by this one.
 
 ## Build command
 
-Run from this folder. The figures load from `figures/` and the university seal from `assets/`.
+Run from this folder. The figures load from `figures/` and the university seal from `assets/`. In the Desktop delivery folder, run the commands from its `source_copy` folder.
 
 ```sh
 mkdir -p build
@@ -26,22 +26,24 @@ The fonts are EB Garamond and Fira Mono.
 | Fonts | 11 embedded, none of Type 3 |
 | Overfull and underfull boxes | 0 and 0 |
 | Poster numbers | Every number appears in the 28 September 2026 paper draft or in the numbers ledger of the project |
-| Layout | The two columns end 0.37 and 0.17 in above the Resources heading, and the Resources band ends 0.61 in above the footer text |
+| Layout | The two columns end 0.38 and 0.18 in above the Resources heading, and the Resources band ends 0.62 in above the footer text |
 | Review | Three independent reviews (layout, claim fidelity against the paper, stale references) ran on 2026-10-22, and every confirmed finding was applied or recorded |
 
 ## QR codes
 
-Each symbol decodes to its URL from a render at 150 dpi. The codes are 5.0 cm at error level Q on a white quiet zone. Each destination answered on 2026-10-22.
+Each symbol decodes to its URL from a render at 150 dpi. The six codes in the Resources band are 5.0 cm at error level Q on a white quiet zone, and the header code for arunshar.com is 5.2 cm. Each destination answered on 2026-10-22, except LinkedIn, which blocks automated requests. The LinkedIn URL was decoded from the QR image of the author's own profile.
 
 | Label | URL |
 | --- | --- |
 | Repo | https://github.com/arunshar/pcrf-aias2026-talk |
 | Slides | https://github.com/arunshar/pcrf-aias2026-talk/blob/main/slides/PCRF_AIAS2026_slides.pdf |
-| Video | https://youtu.be/xyiUB-ehX8g |
 | Paper | https://github.com/arunshar/pcrf-aias2026-talk/blob/main/paper/PCRF_AIAS2026_paper.pdf |
+| AIAS+ video | https://youtu.be/xyiUB-ehX8g |
+| PyTorch video | https://youtu.be/k1FH2Pu953w |
+| LinkedIn | https://www.linkedin.com/in/arun08sharma?fromQR=1 |
 | Header | https://arunshar.com/ |
 
-The paper link serves the anonymized 22 September 2026 build of the manuscript. The video link serves the narrated recording of the talk.
+The paper link serves the anonymized 22 September 2026 build of the manuscript. The AIAS+ video link serves the narrated recording of this talk. The PyTorch video link serves the PyTorch Conference talk, "From PyTorch to Production", which follows the same model from training to serving.
 
 ## Known limits
 
